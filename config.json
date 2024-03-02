@@ -8,6 +8,6 @@
   "cleanup": true,
   "theme": "cards",
   "css": "./custom.css",
-  "footer": "Copyright Shirley.C",
+  "footer": "Copyright @ Shirley.C",
   "usage-stats": false
 }
