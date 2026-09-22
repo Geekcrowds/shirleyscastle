@@ -28,6 +28,12 @@ jobs:
       - name: Build Gallery
         run: docker run -v "$(pwd):/work" ghcr.io/thumbsup/thumbsup /bin/sh -c "cd /work/ && thumbsup --config config.json"
 
+      - name: Copy custom collection pages
+        run: |
+          mkdir -p build_output/collections/data
+          cp gallery/collections/*.html build_output/collections/
+          cp gallery/collections/data/* build_output/collections/data/
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
