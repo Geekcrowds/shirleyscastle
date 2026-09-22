@@ -30,6 +30,7 @@ jobs:
 
       - name: Copy custom collection pages
         run: |
+          sudo chown -R "$USER:$USER" build_output
           mkdir -p build_output/collections/data
           cp gallery/collections/*.html build_output/collections/
           cp gallery/collections/data/* build_output/collections/data/
