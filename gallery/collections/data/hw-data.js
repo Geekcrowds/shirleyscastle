@@ -1,6 +1,6 @@
 // Data loader kept separate from the page UI. It reads the original immutable
 // catalog while the collection is migrated to a standalone JSON file.
-const SOURCE = 'https://raw.githubusercontent.com/Geekcrowds/shirleyscastle/7187856a85e24dca9ebcf868349adc3616514d90/gallery/collections/hw.html';
+const SOURCE = 'https://raw.githubusercontent.com/Geekcrowds/shirleyscastle/7187856a85e24dca9ebcf868349adc3616514d90/gallery/collections/hw-catalog.json';
 
 export async function loadDatasets() {
   const response = await fetch(SOURCE, { cache: 'force-cache' });
